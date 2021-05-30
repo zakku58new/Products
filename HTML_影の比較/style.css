@@ -1,0 +1,28 @@
+.gamen {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.test {
+  text-align: center;
+  padding: 50px;
+  border: 2px solid;
+  width: 40%;
+}
+
+img {
+  width: 40%;
+}
+
+.image1{
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.image2 {
+  filter: drop-shadow(5px 10px 20px rgba(0, 0, 0, 1));
+}
