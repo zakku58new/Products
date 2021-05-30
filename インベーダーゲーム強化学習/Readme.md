@@ -1,5 +1,5 @@
 # 概要
-[【AI + pygame】pygameで作るインベーダー風ゲーム 第4回 強化学習編その1（必要なメソッドの実装）](https://blog.formzu.com/pygame-invader-4)と[【AI + pygame】pygameで作るインベーダー風ゲーム 第4回 強化学習編その1（必要なメソッドの実装）](https://blog.formzu.com/pygame-invader-5)
+[【AI + pygame】pygameで作るインベーダー風ゲーム 第4回 強化学習編その1（必要なメソッドの実装）](https://blog.formzu.com/pygame-invader-4)と[【AI + pygame】pygameで作るインベーダー風ゲーム 第5回 強化学習編その2（ゲーム画面から学習させる）](https://blog.formzu.com/pygame-invader-5)
 を参考にしてインベーダー風ゲームの機械学習を行った。
 
 # 説明
