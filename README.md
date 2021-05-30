@@ -4,7 +4,7 @@
 
 # 各制作物の説明
 ・HTML_影の比較  
-  CSSの”box-shadow”と”filter: drop-shadow”を使用して影をつけた時のそれぞれの違いを確認した。  
+  CSSで”box-shadow”と”filter: drop-shadow”を使用して影をつけた時のそれぞれの違いを確認した。  
 ・WEBサイト作成  
   WEB上のプログラミング学習サイトを見ながらHTMLとCSSで作成を行た。  
 ・お小遣アプリ  
