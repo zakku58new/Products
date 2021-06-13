@@ -1,6 +1,6 @@
 # 概要  
-[JavaScript: 神経衰弱ゲームの作り方](https://step-learn.com/article/javascript/157-trump-game.html)で紹介されていた神経衰弱ゲームを作成しました。
-得点と手数カウントの要素を追加しました。
+[JavaScript: 神経衰弱ゲームの作り方](https://step-learn.com/article/javascript/157-trump-game.html)で紹介されていた神経衰弱ゲームを作成しました。  
+オリジナルの要素として得点と手数カウントを追加しました。
 
 # 追加要素について  
 ・得点  
