@@ -1,5 +1,5 @@
 # 概要
-https://dawn-techschool.com
+[DAWN](https://dawn-techschool.com)
 というサイトでWEBサイトの作成を勉強している。
 
 このサイトで解説されているDAWN macaronという架空のお菓子屋さんの商品紹介サイトの作成を行った。
