@@ -1,0 +1,8 @@
+input, button {
+  display: block;
+}
+
+/* 削除ボタンははじめは非表示 */
+.btn-remove {
+  display: none;
+}
