@@ -1,6 +1,8 @@
 # 概要
-画面に日付、もらった金額、使った金額、購入したものを入力することで、その情報がＤＢに登録されるシステムである。   
-”kakeibo_index.php”がメイン画面のソース、”kakeibo_total.php”、”kakeibo_edit.php”、”kakeibo_edit-2.php”、”kakeibo_delete.php”　はそれぞれメイン画面からの遷移先のソースである。  
+画面に日付、もらった金額、使った金額、購入したものを入力することで、その情報がＤＢに登録されるシステムである。  
+画面構成は以下のようになっている。
+
+kakeibo_index.php：メイン画面  
 kakeibo_total.php：集計画面  
 kakeibo_edit.php：編集内容入力画面  
 kakeibo_edit-2.php：編集確認画面  
