@@ -3,7 +3,7 @@
 ”kakeibo_index.php”がメイン画面のソース、”kakeibo_total.php”、”kakeibo_edit.php”、”kakeibo_edit-2.php”、”kakeibo_delete.php”　はそれぞれメイン画面からの遷移先のソースである。  
 kakeibo_total.php：集計画面  
 kakeibo_edit.php：編集内容入力画面  
-kakeibo_edit-2.php：編集確認画面
+kakeibo_edit-2.php：編集確認画面  
 kakeibo_delete.php：削除画面　　
 
 # 使用した言語
