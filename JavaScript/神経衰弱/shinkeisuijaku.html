@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="point">得点</div>
+  <div id="panel"></div>
+  <div id="result">経過時間</div>
+  <div id="turncnt">手数</div>
+
+  <script>
+    // ブラウザでエラーチェックされる
+    'use strict';
+
+    // グローバル
+    // div要素を格納
+    var cards = [];
+    // 開始時間
+    var startTime;
+    // 経過秒数用　タイマーID
+    var timer;
+    // カードめくり用　タイマーID
+    var backTimer;
+    // 1枚目かどうかのフラグ　１枚目：true　2枚目：false
+    var flagFirst = true;
+    // 1枚目のカードを格納
+    var cardFirst;
+    // そろえた枚数
+    var countUnit = 0;
+
+    // 得点
+    var pointCnt = 0;
+    var point = document.getElementById('point');
+    // 手数カウント
+    var tesuCnt = 0;
+    var tesu = document.getElementById('turncnt');
+
+    window.onload = function(){
+      // 数字格納　一時配列
+      var arr = [];
+
+      for(var i = 0; i < 10; i++){
+        // ペアの数字を10組
+        arr.push(i);
+        arr.push(i);
+      }
+
+      // シャフル　関数を使用
+      shuffle(arr);
+
+      var panel = document.getElementById('panel');
+
+      // div要素作成
+      for(i = 0; i < 20; i++){
+        var div = document.createElement('div');
+        div.className = 'card back';
+        div.index = i;
+        div.number = arr[i];
+        div.innerHTML = '裏';
+        // 関数を使用させる
+        div.onclick = turn;
+        panel.appendChild(div);
+        cards.push(div);
+      }
+      // 開始時刻を取得
+      startTime = new Date();
+      // タイマー開始
+      startTimer();
+
+      // 手数の初期表示
+      tesu.innerHTML = '手数：' + tesuCnt + '手';
+      // 得点の初期表示
+      point.innerHTML = '得点：' + pointCnt + '点';
+    }
+
+    // シャッフル用関数
+    function shuffle(arr){
+      var n = arr.length;
+      var temp, i;
+
+      while(n){
+        i = Math.floor(Math.random() * n--);
+        temp = arr[n];
+        arr[n] = arr[i];
+        arr[i] = temp;
+      }
+      return arr;
+    }
+
+    // クリック時の処理
+    function turn(e){
+      var div = e.target;
+
+      // カードのタイマー処理が動作中は return
+      if(backTimer) return;
+
+      // 裏向きのカードをクリックした場合は数字を表示する
+      if(div.innerHTML == '裏'){
+        div.className = 'card';
+        div.innerHTML = div.number;
+      }else{
+        // 数字が表示されているカードは　return
+        return;
+      }
+
+      // 1枚目の処理
+      if(flagFirst){
+        // cardFirst　は２枚目の処理の時に使う
+        cardFirst = div;
+        // フラグ変更
+        flagFirst = false;
+      // ２枚目の処理
+      }else{
+        // 手数をカウントする
+        tesuCnt = tesuCnt + 1;
+        // 手数を表示する
+        tesu.innerHTML = '手数：' + tesuCnt + '手';
+
+        // 数字が１枚目と一致する場合
+        if(cardFirst.number == div.number){
+          countUnit++;
+          // 見えない状態にする
+          backTimer = setTimeout(function(){
+            div.className = 'card finish';
+            cardFirst.className = 'card finish';
+            backTimer = NaN;
+            
+            // 得点の加算
+            pointCnt = pointCnt + 10;
+            // 得点の表示
+            point.innerHTML = '得点：' + pointCnt + '点';
+
+            if(countUnit == 10){
+              clearInterval(timer); //timer終了
+            }
+          }, 500)
+        // 一致しない場合
+        }else{
+          // カードを裏面に戻す
+          backTimer = setTimeout(function(){
+            div.className = 'card back';
+            div.innerHTML = '裏';
+            cardFirst.className = 'card back';
+            cardFirst.innerHTML = '裏';
+            cardFirst = null;
+            backTimer = NaN;
+          }, 500);
+        }
+        flagFirst = true;
+      }
+    }
+
+    // タイマー開始
+    function startTimer(){
+      timer = setInterval(showSecond, 1000);
+    }
+
+    // 秒数表示
+    function showSecond(){
+      var nowTime = new Date();
+      var elapsedTime = Math.floor((nowTime - startTime) / 1000);
+      var str = '経過秒数：' + elapsedTime + '秒';
+
+      var re = document.getElementById('result');
+      re.innerHTML = str;
+    }
+
+  </script>
+
+</body>
+</html>

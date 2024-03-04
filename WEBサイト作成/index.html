@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!-- 言語の指定 -->
+<html lang="ja">
+<head>
+  <!-- 文字コードの指定 -->
+  <meta charset="UTF-8">
+  <!-- Internet Explorer用の設定（不要） -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- スマートフォンで表示した際の表示設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>DAWN Macaron</title>
+  <!-- Google Fontsの「Great Vibes」 -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- headerタグとは、ページの最上部に表示するメニューなどのエリアを表示するHTMLタグ -->
+  <header>
+    <!-- グローバルナビゲーションのエリア（.g-navi）をdivタグで記述 -->
+    <!-- グローバルナビゲーション：サイト全体に移動するためのメニュー -->
+    <nav class="g-navi"> <!-- ② -->
+      <div class="container nav-wrapper"> <!-- ③ -->
+        <!-- メニュー内容 -->
+        <!-- ■リンクテキスト -->
+        <ul>
+          <!-- 同一ページ内のリンクは、「id属性」で指定された場所まで「href="#○○"」と記述することで移動ができます。 -->
+          <li class="nav-item"><a href="#concept">CONCEPT</a></li>
+          <li class="nav-item"><a href="#feature">FEATURE</a></li>
+          <li class="nav-item"><a href="#thought">THOUGHT</a></li>
+          <li class="nav-item"><a href="#lineup">LINE UP</a></li>
+          <li class="nav-item"><a href="#store">STORE</a></li>
+          <li class="nav-item"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="g-navi-sp">
+      <div class="sp-logo">
+        <p class="logo-title">DAWN macaron</p>
+      </div>
+      <!-- ハンバーガーメニュー -->
+      <div class="menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <section id="main-visual"> <!-- ④ -->
+    <div class="container mv-wrapper">
+      <!-- <img src="表示する画像のパス（場所）" alt="表示画像の説明文言"> -->
+      <!-- <img src="./image/mv.png" alt="hederのマカロン画像"> -->
+      <div class="mv-right">
+        <!-- メインビジュアルのテキスト -->
+        <h1>DAWN macaron</h1>
+        <p class="text">ひとくちにしあわせは宿る</p>
+        <div class="purchase-button">
+          <!-- ボタン押下時にラインナップエリア（#lineup）へ移動 -->
+          <a href="#lineup">購入はこちら</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- sectionタグとは、一まとまりの章（セクション）に使われるタグ -->
+  <section id="concept">
+    <!-- コンセプトエリアの要素が入ります -->
+    <!-- コンテンツ幅に合わせて要素を表示させるため  -->
+    <div class="container">
+      <!-- 共通エリアタイトル -->
+      <div class="title">
+        <!-- エリアタイトル -->
+        <h2>Concept</h2>
+        <!-- エリアタイトル日本語（英字の下に表示） -->
+        <!-- span：段落（pタグ）ではなく、見出し（h1~h6タグ）でもない要素 -->
+        <span class="ja-title">コンセプト</span>
+      </div>
+      <!-- コンセプトコピー -->
+      <div class="concept-copy">
+        <h3 class="main-copy">ひとくちにしあわせは宿る</h3>
+        <!-- ＜br＞：改行、インライン要素（閉じタグはいらない）、＜strong＞：文字を太く -->
+        <!-- strongタグはインライン要素の特性を持っているため自動的に改行されない -->
+        <p class="concept-text about-text">コンセプトは<br><strong>いつでも楽しめるマカロン</strong></p>
+        <!-- about-textは、テキストに関するスタイル（文字サイズや文字間など）の設定 -->
+        <!-- concept-textは、レイアウトに関するスタイル（コンテンツ間の余白「margin」など）を設定 -->
+        <p class="concept-text about-text">愛らしいかたちと口に入れた瞬間のハーモニーを、手軽に感じてもらいたい。<br>その願いを込めて、私たちはマカロンを作っています。</p>
+        <p class="concept-text about-text">慌ただしい「いま」を生きる皆様を、<br>マカロンがそばにあるスイートな日常で、包み込みたい。</p>
+        <p class="concept-text about-text">「今日の気分は、これ。明日は、これ。」<br>DAWN発の新作マカロンを是非御賞味ください。</p>
+      </div>
+    </div>
+  </section>
+  <section id="feature">
+    <!-- こだわりエリアの要素が入ります -->
+    <div class="container">
+      <!-- コンセプトエリアで記述したCSSが適応される -->
+      <div class="title">
+        <h2>Fertuer</h2>
+        <span class="ja-title">こだわり</span>
+      </div>
+      <!-- feature-box３つをまとめる、横並びに設定するため -->
+      <div class="feature-wrapper">
+        <!-- （.feature-box）では「コンテンツのレイアウト」や「子要素の配置に関するスタイル」の設定、（.box-design）では「ページ全体で共通するボックスのスタイル」の設定 -->
+        <!-- ボックス１つ目 -->
+        <div class="feature-box box-design">
+          <img class="feature-image" src="./image/feature01.png" alt="material">
+          <div class="feature-text">
+            <span class="feature-number">Point1</span>
+            <h3 class="feature-title">安心安全の素材</h3>
+            <!-- about-textは共通パーツ -->
+            <p class="ferture-about about-text">身体に優しい素材を仕入れ、丁寧に仕上げます。マカロンの中に入れるジャムやチョコも有機栽培で作られた果実のみ使用。</p>
+          </div>
+        </div>
+        <!-- ボックス２つ目 -->
+        <div class="feature-box box-design">
+          <img class="feature-image" src="./image/feature02.png" alt="material">
+          <div class="feature-text">
+            <span class="feature-number">Point2</span>
+            <h3 class="feature-title">徹底したこだわり</h3>
+            <!-- about-textは共通パーツ -->
+            <p class="ferture-about about-text">マカロンの食感を決める独自の「マカロナージュ」「乾燥方法」を採用しています。中はしっとり、外はさくっと。</p>
+          </div>
+        </div>
+        <!-- ボックス３つ目 -->
+        <div class="feature-box box-design">
+          <img class="feature-image" src="./image/feature03.png" alt="material">
+          <div class="feature-text">
+            <span class="feature-number">Point3</span>
+            <h3 class="feature-title">かわいらしいパッケージ</h3>
+            <!-- about-textは共通パーツ -->
+            <p class="ferture-about about-text">手に取った時の「ほっこり」とした気分。目で感じ、舌でも感じるやさしい温もり。状況に合ったパッケージをお選び下さい。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="thought">
+    <!-- パティシエの想いエリアの要素が入ります -->
+    <div class="container">
+      <div class="title">
+        <h2>Thought</h2>
+        <p class="ja-title">想い</p>
+      </div>
+      <!-- スタッフボックス -->
+      <div class="thought-container">
+        <!-- box-design：背景色#fffを指定 -->
+        <div class="staff-box box-design">
+          <!-- 画像が読み込めなかった時altの内容が表示される -->
+          <img class="staff-image" src="./image/thought01.png" alt="シェフ田中啓介">
+          <div class="staff-text">
+            <h3 class="staff-title">お客様が口に運ぶ瞬間までをデザインする</h3>
+            <p class="staff-about about-text">マカロンはお菓子の宝石とも称されます。見て感動、口に入れて感動してもらえるマカロンを作りたいと思い厨房にいます。毎夜スタッフで作っては試食を重ね毎月必ず新商品をリリースしています。心を込めたマカロンをぜひご賞味頂きたいです。</p>
+            <p class="staff-name">パティシエ　田中啓介</p>
+          </div>
+        </div>
+        <!-- 戻る、進むボタン -->
+        <!-- ボタンはシンプルな黒線を使った矢印「＜」「＞」 -->
+        <!-- （.slide-button）はスライド機能のトリガー（機能を動かすための名前）で使用し、（.prev）はボタンのデザインを指定するために使用 -->
+        <span class="slide-button prev"></span>
+        <span class="slide-button next"></span>
+      </div>
+    </div>
+  </section>
+  <section id="macaronlife">
+    <!-- マカロンライフエリアの要素が入ります -->
+    <div class="container">
+      <div class="title">
+        <h2>Macaron life</h2>
+        <p class="ja-title">豊かなマカロンライフ</p>
+      </div>
+      <div class="life-wrapper">
+        <div class="life-type">
+          <!-- モーダル機能のjQuery実装用のclassに -->
+          <a href="#" class="modalopen">
+            <img class="life-image" src="./image/macaronlife01.png" alt="teatime">
+            <p class="life-name">tea time</p>
+          </a>
+        </div>
+        <div class="life-type">
+          <a href="#" class="modalopen">
+            <img class="life-image" src="./image/macaronlife02.png" alt="party">
+            <p class="life-name">party</p>
+          </a>
+        </div>
+        <div class="life-type">
+          <a href="#" class="modalopen">
+            <img class="life-image" src="./image/macaronlife03.png" alt="gifts">
+            <p class="life-name">gifts</p>
+          </a>
+        </div>
+        <div class="life-type">
+          <a href="#" class="modalopen">
+            <img class="life-image" src="./image/macaronlife04.png" alt="season">
+            <p class="life-name">season</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="lineup">
+    <!-- ラインナップエリアの要素が入ります -->
+    <div class="container">
+      <div class="title">
+        <h2>Line up</h2>
+        <p class="ja-title">シチュエーション別のおすすめ</p>
+      </div>
+      <div class="lineup-menu">
+        <ul class="filter">
+          <li class="lineup-tab active"><a class="ranking" href="#">ranking</a></li>
+          <li class="lineup-tab"><a class="tea time" href="#">tea time</a></li>
+          <li class="lineup-tab"><a class="party" href="#">party</a></li>
+          <li class="lineup-tab"><a class="gifts" href="#">gifts</a></li>
+          <li class="lineup-tab"><a class="season" href="#">season</a></li>
+        </ul>
+      </div>
+      <div class="linepu-wrapper">
+        <div class="lineup-product">
+          <!-- 角丸の枠を表示するため、divで囲む -->
+          <div class="lineup-image">
+            <img src="./image/macaron01.png" alt="レモン">
+          </div>
+          <div class="lineup-about">
+            <div class="lineup-name">
+              <span class="name-en">Lemon</span>
+              <span class="name-ja">レモン</span>
+            </div>
+            <p class="lineup-text about-text">レモンの爽やかな酸味の切れ味が絶妙な逸品です。</p>
+          </div>
+        </div>
+        <div class="lineup-product">
+          <div class="lineup-image">
+            <img src="./image/macaron02.png" alt="ピスタチオ">
+          </div>
+          <div class="lineup-about">
+            <div class="lineup-name">
+              <span class="name-en">Pistachio</span>
+              <span class="name-ja">ピスタチオ</span>
+            </div>
+            <p class="lineup-text about-text">香り・コク・旨みが凝縮したピスタチオならではの気品漂う逸品です。</p>
+          </div>
+        </div>
+        <div class="lineup-product">
+          <div class="lineup-image">
+            <img src="./image/macaron03.png" alt="ストロベリー">
+          </div>
+          <div class="lineup-about">
+            <div class="lineup-name">
+              <span class="name-en">Strawberry</span>
+              <span class="name-ja">ストロベリー</span>
+            </div>
+            <p class="lineup-text about-text">優雅なイチゴの甘みの後はフレッシュ感ある酸味が訪れます。</p>
+          </div>
+        </div>
+      </div>
+      <!-- ボタン用 -->
+      <div class="more-lineup">
+        <a href="#" class="btn-more">more</a>
+      </div>
+    </div>
+  </section>
+  <section id="package">
+    <!-- パッケージエリアの要素が入ります -->
+    <div class="container">
+      <div class="title">
+        <h2>Package</h2>
+        <p class="ja-title">場面に合わせて３種類からお選びいだだけます</p>
+      </div>
+      <div class="package-wrapper">
+        <!-- １つ目 -->
+        <div class="package-lineup">
+          <img class="package-image" src="./image/package3.png" alt="３個入り">
+          <div class="package-text">
+            <h3 class="package-title">DAWNマカロン ３個入り</h3>
+            <p class="package-value">\910（税込）</p>
+          </div>
+          <div class="purchase-wrapper">
+            <!-- 商品を選択するためのセレクトボックス -->
+            <!-- name属性は選択された情報をデータとして送るときに必要なもの -->
+            <select class="package-select" name="select">
+              <option value="">マカロンを選ぶ</option>
+              <option value="lemon">レモン</option>
+              <option value="pistachio">ピスタチオ</option>
+              <option value="strawberry">ストロベリー</option>
+            </select>
+            <div class="purchese-number">
+              数量：
+              <select class="number" name="number">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="select-cart">
+              <a href="#">カートに入れる</a>
+            </div>
+          </div>
+          <p class="package-text about-text">お好みのマカロン3個が入ったミニセット。1週間がんばった自分へのご褒美に。</p>
+        </div>
+        <!-- ２つ目 -->
+        <div class="package-lineup">
+          <img class="package-image" src="./image/package6.png" alt="６個入り">
+          <div class="package-text">
+            <h3 class="package-title">DAWNマカロン ６個入り</h3>
+            <p class="package-value">\1,820（税込）</p>
+          </div>
+          <div class="purchase-wrapper">
+            <!-- 商品を選択するためのセレクトボックス -->
+            <!-- name属性は選択された情報をデータとして送るときに必要なもの -->
+            <select class="package-select" name="select">
+              <option value="">マカロンを選ぶ</option>
+              <option value="lemon">レモン</option>
+              <option value="pistachio">ピスタチオ</option>
+              <option value="strawberry">ストロベリー</option>
+            </select>
+            <div class="purchese-number">
+              数量：
+              <select class="number" name="number">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="select-cart">
+              <a href="#">カートに入れる</a>
+            </div>
+          </div>
+          <p class="package-text about-text">お好みのマカロン6個が入ったセット。ご友人の方へ、日頃の感謝を込めて。</p>
+        </div>
+        <!-- ３つ目 -->
+        <div class="package-lineup">
+          <img class="package-image" src="./image/package12.png" alt="１２個入り">
+          <div class="package-text">
+            <h3 class="package-title">DAWNマカロン １２個入り</h3>
+            <p class="package-value">\3,640（税込）</p>
+          </div>
+          <div class="purchase-wrapper">
+            <!-- 商品を選択するためのセレクトボックス -->
+            <!-- name属性は選択された情報をデータとして送るときに必要なもの -->
+            <select class="package-select" name="select">
+              <option value="">マカロンを選ぶ</option>
+              <option value="lemon">レモン</option>
+              <option value="pistachio">ピスタチオ</option>
+              <option value="strawberry">ストロベリー</option>
+            </select>
+            <div class="purchese-number">
+              数量：
+              <select class="number" name="number">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="select-cart">
+              <a href="#">カートに入れる</a>
+            </div>
+          </div>
+          <p class="package-text about-text">お好みのマカロン12個が入ったセット。気兼ねなく過ごせる仲間と一緒に素敵なマカロンタイムを。</p>
+        </div>
+      </div>.
+    </div>
+  </section>
+  <section id="store">
+    <!-- 店舗情報エリアの要素が入ります -->
+    <div class="container">
+      <div class="title">
+        <h2>Store</h2>
+        <p class="ja-title">店舗情報</p>
+      </div>
+      <div class="store-wrapper">
+        <!-- GoogleMapの埋め込み -->
+        <!-- GoogleMapのCSSも調整していくため、iframeタグにクラス名（.map-image）をつけ -->
+        <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1502832652163!2d139.7697684146056!3d35.697919236665285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1d4ec94be1%3A0xe8781a5ca3d62bed!2z44CSMTAxLTAwMjEg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65aSW56We55Sw77yR5LiB55uu77yR77yV4oiS77yR77yWIOODqeOCuOOCquS8mumkqA!5e0!3m2!1sja!2sjp!4v1619338279442!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+        <div class="store-text">
+          <p class="store-name">DAWN Macaron</p>
+          <!-- addressタグで囲ってうことで、Googleなどの検索エンジンに住所であることを認識させる -->
+          <!-- addressはデフォルトでは斜体で表示される -->
+          <address>
+            <p>〒110-0001<br>
+            東京都千代田区秋葉原<br>
+            <!-- href属性の中に「tel:」を記述することで、クリックした際に指定の番号に電話をかけることができるようになる -->
+            TEL:<a class="store-address" href="tel:1200000000">1200-000-0000</a></p>
+          </address>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <!-- お問い合わせエリアの要素が入ります -->
+    <div class="container">
+      <div class="title">
+        <h2>Contact</h2>
+        <p class="ja-title">お問い合わせ</p>
+      </div>
+      <!-- action属性は「入力されたデータを送る先を指定」 -->
+      <!-- method属性は「データの送り方を指定」 -->
+      <form action="index.php" method="POST">
+        <div class="ct-block">
+          <!-- お名前フォーム -->
+          <label class="contact-text" for="name">お名前</label>
+          <!-- placeholder：入力欄に初期表示する値 -->
+          <input type="text" name="yourname" placeholder="例：田中太郎" class="form-name">
+        </div>
+        <div class="ct-block">
+          <!-- メールアドレスフォーム -->
+          <label class="contact-text" for="email">メールアドレス</label>
+          <input type="text" name="mail" placeholder="例：xxxxxx@△△△△△△.com" class="form-mail">
+        </div>
+        <div class="ct-block">
+          <!-- 主なご用件フォーム -->
+          <label class="contact-text" for="main">主なご要件</label>
+          <div class="cp-howto">
+            <!-- selectタグには必須項目であることを伝える「required属性」を指定 -->
+            <select name="mein-request" required>
+              <!-- optionタグの初期表示「ご選択ください」には選択肢から外すために「hidden」を入れる -->
+              <option value="" hidden>ご選択ください</option>
+              <option value="1">お店の予約について</option>
+              <option value="2">宅配サービスについて</option>
+              <option value="3">商品について</option>
+              <option value="4">社員採用について</option>
+            </select>
+          </div>
+        </div>
+        <div class="ct-block">
+          <!-- お問い合わせフォーム -->
+          <label class="contact-text" for="request-about">お問い合わせ内容</label>
+          <!-- 「cols属性」にて1行あたりの文字数を指定
+            「rows属性」にて表示する行数を指定 -->
+          <textarea name="request-about" id="request-about" cols="60" rows="6" placeholder="ここに記入してください"></textarea>
+        </div>
+        <div class="ct-block">
+          <!-- 送信ボタン -->
+          <!-- value：ボタンに表示される文字内容 -->
+          <input class="send-button" type="submit" value="送信">
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <!-- フッターエリアの要素が入ります -->
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo-wrapper">
+          <a href="#" class="logo">DAWN macaron</a>
+          <div class="sns-block">
+            <!-- snsブロック -->
+            <a class="mark" href="https://twitter.com/" target="_blank">
+              <img class="sns-mark" src="./image/twitter.png" alt="twitter" width="30px">
+            </a>
+            <a class="mark" href="https://www.facebook.com/" target="_blank">
+              <img class="sns-mark" src="./image/facebook.png" alt="facebook" width="30px">
+            </a>
+            <a class="mark" href="https://www.instagram.com/" target="_blank">
+              <img class="sns-mark" src="./image/instagram.png" alt="instagram" width="30px">
+            </a>
+          </div>
+        </div>
+        <div class="menu">
+          <!-- メニューボックス -->
+          <ul>
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#feature">FEATURE</a></li>
+            <li><a href="#thought">THOUGHT</a></li>
+            <li><a href="#lineup">LINE UP</a></li>
+            <li><a href="#store">STORE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <!-- 利用規約ボックス -->
+          <ul>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">特定商取引法について</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <small>
+        <!-- コピーライトテキスト -->
+        Copyright © 2019 DAWN inc. All Rights Reserved.
+      </small>
+    </div>
+  </footer>
+
+</body>
+</html>
